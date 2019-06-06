@@ -2,7 +2,8 @@
 Proyecto parte 1
 
 #Requisitos:
-Para 
+
+Para jugar este juego solo se requiere que el usuario digite números naturales.
 
 #Instrucciones de uso:
 
