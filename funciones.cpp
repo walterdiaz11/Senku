@@ -49,7 +49,7 @@ int validar_mov(int origenFila, int origenColumna, int destinoFila, int destinoC
 //Que solo se mueva dos posiciones ya sea vertical, horizontal, arriba o abajo
      if(abs(origenFila-destinoFila)== 2 || abs(origenColumna-destinoColumna)==2){
 cout<<"\nSolo se mueve dos posiciones\n";
-
+//Movimiento horizontal
 if (origenFila == destinoFila){
         //movimiento derecha ---->
          if ((origenColumna < destinoColumna) && (tab[origenFila-1][origenColumna]!='+')){
@@ -62,7 +62,9 @@ if (origenFila == destinoFila){
           return 1;
           }
          }
-         }else{
+         }
+         //Movimiento vertical
+         else{
         if (origenColumna == destinoColumna){
           //movimiento hacia abajo
           if ((origenFila < destinoFila) && (tab[origenFila][origenColumna-1]!='+')){
@@ -95,24 +97,32 @@ void mover(int origenFila, int origenColumna, int destinoFila, int destinoColumn
   
   tab[origenFila - 1][origenColumna - 1] = '+';
   tab[destinoFila - 1][destinoColumna - 1] = 'O';
-
+//Movimiento horizontal
    if (origenFila == destinoFila){
     if (origenColumna < destinoColumna ){
+      //movimiento derecha
       tab[origenFila - 1][origenColumna] = '+';
-    }else{
+    }
+    //movimiento izquierda
+    else{
       tab[origenFila - 1][origenColumna - 2] = '+';
       }
     }
+    //Movimiento vertical
   else{
     if (origenColumna == destinoColumna){
+      //movimiento hacia abajo
       if (origenFila < destinoFila){
         tab[origenFila][origenColumna - 1] = '+';
-      }else{
+      }
+      //movimiento hacia arriba
+      else{
         tab[origenFila - 2][origenColumna - 1] = '+';
         }
       }
     }
   }
+
 
 void perdiste(tablero tab,int fila,int columna){
   int cuentaFichas=0;
