@@ -20,6 +20,14 @@ void inicializarTablero_aleman(tablero tab,int fila, int columna);
 
 void inicializarTablero_asimetrico(tablero tab, int fila, int columna);
 
+void jugar_ingles();
+
+void jugar_aleman();
+
+void jugar_asimetrico();
+
+void menu();
+
 
 
 
